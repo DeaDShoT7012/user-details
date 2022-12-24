@@ -1,0 +1,45 @@
+<h1 class="text-center">USER DETAILS</h1>
+   <!-- <pre>
+            {{allusers | json}}
+        </pre>  -->
+
+<div class="row">
+ <div class="col "    >
+  <style>
+    table, th, td {
+       border:1px solid black;
+    }
+ </style>
+    <table class="table container border text-center" >
+      
+        <tr>
+          <th>User Id</th>
+          <th>First Name</th>
+          <th >Age</th>
+          <th >Gender</th>
+          <th >Email</th>
+          <th >Phone</th>
+          <th >Photo</th>
+          <th >Address</th>
+        </tr>
+        
+        <tr *ngFor="let user of allusers">
+          <td>{{ user.id}}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>
+          <img
+           height="60px"
+           [src]="user.image"
+            alt="no image"
+            class="contact_image">
+          </td>
+         <td>{{ user.address.address }}</td>
+        </tr>
+    </table>
+      </div>
+ </div>
+ 
